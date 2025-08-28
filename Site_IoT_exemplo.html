@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard IoT - Apresentação Profissional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        :root {
+            --cor-principal: #005c47;
+            --cor-secundaria: #3498db;
+            --cor-fundo: #f4f6fa;
+            --cor-card: #fff;
+            --cor-titulo: #222;
+            --cor-borda: #e0e0e0;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--cor-fundo);
+            color: var(--cor-titulo);
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .iot-bg {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.18;
+        }
+        header, main {
+            position: relative;
+            z-index: 1;
+        }
+        header {
+            background: var(--cor-principal);
+            color: #fff;
+            padding: 24px 0 16px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        header img {
+            height: 60px;
+            margin-bottom: 8px;
+        }
+        .dashboard-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+            letter-spacing: 1px;
+        }
+        .dashboard-container {
+            max-width: 1100px;
+            margin: 32px auto;
+            padding: 0 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+        }
+        .card {
+            background: var(--cor-card);
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+            border: 1px solid var(--cor-borda);
+            padding: 28px 24px 18px 24px;
+            flex: 1 1 420px;
+            max-width: 480px;
+            min-width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--cor-principal);
+            margin-bottom: 18px;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+        iframe {
+            width: 100%;
+            height: 260px;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+            background: #fff;
+        }
+        @media (max-width: 900px) {
+            .dashboard-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 24px;
+            }
+            .card {
+                max-width: 98vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="iot-bg">
+        <svg width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <g>
+                <!-- Pontos principais -->
+                <circle cx="300" cy="200" r="8" fill="#3498db">
+                    <animate attributeName="r" values="8;14;8" dur="3s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="700" cy="400" r="8" fill="#005c47">
+                    <animate attributeName="r" values="8;12;8" dur="2.5s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="1200" cy="250" r="8" fill="#3498db">
+                    <animate attributeName="r" values="8;10;8" dur="2s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="1600" cy="600" r="8" fill="#005c47">
+                    <animate attributeName="r" values="8;14;8" dur="3.2s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="1000" cy="800" r="8" fill="#3498db">
+                    <animate attributeName="r" values="8;12;8" dur="2.7s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="400" cy="700" r="8" fill="#005c47">
+                    <animate attributeName="r" values="8;10;8" dur="2.2s" repeatCount="indefinite" />
+                </circle>
+                <!-- Novos pontos -->
+                <circle cx="1700" cy="200" r="7" fill="#3498db">
+                    <animate attributeName="r" values="7;11;7" dur="2.8s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="1500" cy="900" r="7" fill="#005c47">
+                    <animate attributeName="r" values="7;10;7" dur="2.3s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="200" cy="900" r="7" fill="#3498db">
+                    <animate attributeName="r" values="7;12;7" dur="2.6s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="900" cy="200" r="7" fill="#005c47">
+                    <animate attributeName="r" values="7;11;7" dur="2.1s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="600" cy="900" r="7" fill="#3498db">
+                    <animate attributeName="r" values="7;10;7" dur="2.9s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="1800" cy="800" r="7" fill="#005c47">
+                    <animate attributeName="r" values="7;12;7" dur="2.4s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="1100" cy="1000" r="7" fill="#3498db">
+                    <animate attributeName="r" values="7;11;7" dur="2.2s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="300" cy="500" r="7" fill="#005c47">
+                    <animate attributeName="r" values="7;10;7" dur="2.7s" repeatCount="indefinite" />
+                </circle>
+                <!-- Linhas principais -->
+                <line x1="300" y1="200" x2="700" y2="400" stroke="#3498db" stroke-width="3" opacity="0.5">
+                    <animate attributeName="opacity" values="0.5;0.8;0.5" dur="3s" repeatCount="indefinite" />
+                </line>
+                <line x1="700" y1="400" x2="1200" y2="250" stroke="#005c47" stroke-width="3" opacity="0.5">
+                    <animate attributeName="opacity" values="0.5;0.7;0.5" dur="2.5s" repeatCount="indefinite" />
+                </line>
+                <line x1="1200" y1="250" x2="1600" y2="600" stroke="#3498db" stroke-width="3" opacity="0.5">
+                    <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2.2s" repeatCount="indefinite" />
+                </line>
+                <line x1="1600" y1="600" x2="1000" y2="800" stroke="#005c47" stroke-width="3" opacity="0.5">
+                    <animate attributeName="opacity" values="0.5;0.7;0.5" dur="2.7s" repeatCount="indefinite" />
+                </line>
+                <line x1="1000" y1="800" x2="400" y2="700" stroke="#3498db" stroke-width="3" opacity="0.5">
+                    <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2.3s" repeatCount="indefinite" />
+                </line>
+                <line x1="400" y1="700" x2="300" y2="200" stroke="#005c47" stroke-width="3" opacity="0.5">
+                    <animate attributeName="opacity" values="0.5;0.7;0.5" dur="2.8s" repeatCount="indefinite" />
+                </line>
+                <!-- Novas conexões -->
+                <line x1="1700" y1="200" x2="1600" y2="600" stroke="#3498db" stroke-width="2.5" opacity="0.4">
+                    <animate attributeName="opacity" values="0.4;0.7;0.4" dur="2.6s" repeatCount="indefinite" />
+                </line>
+                <line x1="1700" y1="200" x2="1200" y2="250" stroke="#005c47" stroke-width="2.5" opacity="0.4">
+                    <animate attributeName="opacity" values="0.4;0.6;0.4" dur="2.2s" repeatCount="indefinite" />
+                </line>
+                <line x1="1500" y1="900" x2="1000" y2="800" stroke="#3498db" stroke-width="2.5" opacity="0.4">
+                    <animate attributeName="opacity" values="0.4;0.7;0.4" dur="2.5s" repeatCount="indefinite" />
+                </line>
+                <line x1="200" y1="900" x2="400" y2="700" stroke="#005c47" stroke-width="2.5" opacity="0.4">
+                    <animate attributeName="opacity" values="0.4;0.6;0.4" dur="2.3s" repeatCount="indefinite" />
+                </line>
+                <line x1="900" y1="200" x2="1200" y2="250" stroke="#3498db" stroke-width="2.5" opacity="0.4">
+                    <animate attributeName="opacity" values="0.4;0.7;0.4" dur="2.1s" repeatCount="indefinite" />
+                </line>
+                <line x1="600" y1="900" x2="1000" y2="800" stroke="#005c47" stroke-width="2.5" opacity="0.4">
+                    <animate attributeName="opacity" values="0.4;0.6;0.4" dur="2.9s" repeatCount="indefinite" />
+                </line>
+                <line x1="1800" y1="800" x2="1600" y2="600" stroke="#3498db" stroke-width="2.5" opacity="0.4">
+                    <animate attributeName="opacity" values="0.4;0.7;0.4" dur="2.4s" repeatCount="indefinite" />
+                </line>
+                <line x1="1100" y1="1000" x2="1000" y2="800" stroke="#005c47" stroke-width="2.5" opacity="0.4">
+                    <animate attributeName="opacity" values="0.4;0.6;0.4" dur="2.2s" repeatCount="indefinite" />
+                </line>
+                <line x1="300" y1="500" x2="700" y2="400" stroke="#3498db" stroke-width="2.5" opacity="0.4">
+                    <animate attributeName="opacity" values="0.4;0.7;0.4" dur="2.7s" repeatCount="indefinite" />
+                </line>
+                <line x1="300" y1="500" x2="400" y2="700" stroke="#005c47" stroke-width="2.5" opacity="0.4">
+                    <animate attributeName="opacity" values="0.4;0.6;0.4" dur="2.5s" repeatCount="indefinite" />
+                </line>
+                <line x1="300" y1="500" x2="200" y2="900" stroke="#3498db" stroke-width="2.5" opacity="0.4">
+                    <animate attributeName="opacity" values="0.4;0.7;0.4" dur="2.8s" repeatCount="indefinite" />
+                </line>
+            </g>
+        </svg>
+    </div>
+    <header>
+        <img src="imagens/logoIFFAR.png" alt="Instituto Federal Farroupilha - Campus Panambi" />
+        <div class="dashboard-title"><i class="fas fa-chart-bar"></i> Dashboard IoT - Monitoramento</div>
+        <div style="font-size:1rem;opacity:0.85;">Visualização profissional de dados em tempo real</div>
+    </header>
+    <main>
+        <div class="dashboard-container">
+            <div class="card">
+                <div class="card-title"><i class="fas fa-chart-line"></i> Gráfico de Monitoramento (ThingSpeak)</div>
+                <iframe src="https://thingspeak.com/channels/3042973/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" allowfullscreen></iframe>
+            </div>
+            <div class="card">
+                <div class="card-title"><i class="fas fa-gauge-high"></i> Widget Resumido (ThingSpeak)</div>
+                <iframe src="https://thingspeak.com/channels/3042973/widgets/1118513" allowfullscreen></iframe>
+            </div>
+            <div class="card">
+                <div class="card-title"><i class="fas fa-thermometer-half"></i> Termômetro Interativo</div>
+                <div style="display:flex;flex-direction:column;align-items:center;gap:18px;">
+                    <div id="thermo-value" style="font-size:2rem;font-weight:600;color:#d62020;">25°C</div>
+                    <div style="height:180px;display:flex;align-items:center;">
+                        <svg id="thermo-svg" width="60" height="160" viewBox="0 0 60 160">
+                            <rect x="25" y="20" width="10" height="110" rx="5" fill="#eee" stroke="#bbb" stroke-width="2"/>
+                            <circle cx="30" cy="140" r="20" fill="#eee" stroke="#bbb" stroke-width="2"/>
+                            <rect id="thermo-mercury" x="25" y="130" width="10" height="0" rx="5" fill="#d62020"/>
+                            <circle id="thermo-bulb" cx="30" cy="140" r="16" fill="#d62020"/>
+                        </svg>
+                    </div>
+                    <input type="range" id="thermo-slider" min="-10" max="50" value="25" style="width:120px;">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+    // Termômetro interativo
+    function updateThermometer(val) {
+        const min = -10, max = 50;
+        const yMax = 130, yMin = 20, hMax = 110;
+        const y = yMax - ((val - min) / (max - min)) * hMax;
+        const h = ((val - min) / (max - min)) * hMax;
+        document.getElementById('thermo-mercury').setAttribute('y', y);
+        document.getElementById('thermo-mercury').setAttribute('height', h);
+        document.getElementById('thermo-bulb').setAttribute('fill', val > 35 ? '#e67e22' : (val < 5 ? '#3498db' : '#d62020'));
+        document.getElementById('thermo-mercury').setAttribute('fill', val > 35 ? '#e67e22' : (val < 5 ? '#3498db' : '#d62020'));
+        document.getElementById('thermo-value').textContent = val + '°C';
+    }
+    const slider = document.getElementById('thermo-slider');
+    slider.addEventListener('input', e => updateThermometer(Number(e.target.value)));
+    // Inicializa
+    updateThermometer(Number(slider.value));
+    </script>
+</body>
+</html>
